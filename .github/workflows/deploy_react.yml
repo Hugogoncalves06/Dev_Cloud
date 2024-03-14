@@ -28,6 +28,11 @@ jobs :
         with:
           path: dist
           if-no-files-found: error
+      - name: SetUp EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
   deploy:
     environment:
       name: Github-pages
