@@ -22,7 +22,9 @@ jobs :
           cd web-cloud-ynov 
           npm install package.json
       - name: Commande predeploy
-        run: npm run predeploy
+        run: |
+          cd web-cloud-ynov 
+          npm run predeploy
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
