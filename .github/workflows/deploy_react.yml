@@ -18,7 +18,9 @@ jobs :
         with:
           node-version: ${{ matrix.node-version }}
       - name: Commande npm install
-        run: npm install
+        run: |
+          cd web-cloud-ynov 
+          npm install package.json
       - name: Commande predeploy
         run: npm run predeploy
       - name: Setup Pages
